@@ -7,7 +7,6 @@ function RightSide({ selectedMovie }) {
   useEffect(() => {
     selectedMovie &&
       getDetails(selectedMovie.id).then((res) => {
-        console.log(res);
         setDetails(res);
       });
   }, [selectedMovie]);
