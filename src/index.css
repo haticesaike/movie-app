@@ -24,6 +24,54 @@ button,
 select {
   text-transform: none;
 }
+.main {
+  background-color: #c0bec2;
+  height: 100vh;
+}
+.sub-main {
+  background-color: #12151c;
+  height: 70vh;
+}
+@media (max-width: 1080px) {
+  .main {
+    height: 170vh;
+  }
+  .sub-main {
+    height: 100vh;
+  }
+}
+
+input[type="search"] {
+  background-color: #33353d;
+  border-radius: 0px 10px 10px 0px;
+  border: none;
+  width: 258px;
+  font-family: "Varela Round", sans-serif;
+
+  letter-spacing: 1px;
+  padding-left: 5px;
+  color: #a9a8aa;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 85px;
+}
+.search-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  background-color: #33353d;
+  border-radius: 10px 0px 0px 10px;
+  border: none;
+  height: 42px;
+  color: #a9a8aa;
+  cursor: pointer;
+  font-size: 18px;
+  padding-top: 2px;
+}
 
 .container {
   display: flex;
@@ -36,13 +84,11 @@ select {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 250px;
+  gap: 195px;
   margin-top: -50px;
   margin-bottom: -30px;
 }
-.search {
-  padding-left: 125px;
-}
+
 .top-container {
   text-align: center;
   font-family: "Bebas Neue", sans-serif;
@@ -51,13 +97,28 @@ select {
   letter-spacing: 2px;
   padding-left: 70px;
 }
-.bottom-container {
+.bottom {
   display: flex;
   justify-content: center;
   gap: 250px;
   align-items: center;
   padding-left: 50px;
   padding-right: 50px;
+}
+@media (max-width: 1080px) {
+  .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 580px;
+    gap: 2px;
+  }
+  .bottom {
+    flex-direction: column;
+    gap: 60px;
+    margin-bottom: 40px;
+  }
 }
 .left-side {
   display: flex;
@@ -92,7 +153,7 @@ select {
   font-size: 30px;
   height: 450px;
   border-radius: 15px;
-  background-color: #661b1c;
+  background-color: #33353d;
   overflow: auto;
   padding: 10px;
 }
@@ -101,6 +162,7 @@ select {
   align-items: flex-start;
   margin-bottom: -20px;
   margin-top: -15px;
+  font-family: "Varela Round", sans-serif;
 }
 .right-text p {
   display: flex;

@@ -9,13 +9,10 @@ import "@mantine/core/styles.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <MantineProvider>
-    <div
-      style={{
-        backgroundColor: "#12151c",
-        height: "100vh",
-      }}
-    >
-      <App />
+    <div className="main">
+      <div className="sub-main">
+        <App />
+      </div>
     </div>
   </MantineProvider>
 );

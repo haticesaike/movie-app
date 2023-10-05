@@ -5,6 +5,7 @@ import { getPopularMovies } from "./API.jsx";
 import { Input } from "@mantine/core";
 
 function App() {
+  const isMobile = window.innerWidth < 1080;
   const [movies, setMovies] = useState();
   const [selectedMovie, setSelectedMovie] = useState();
   const [searchValue, setSearchValue] = useState("");
@@ -23,7 +24,11 @@ function App() {
       <div className="container">
         <div className="top">
           <div className="search">
+            <span className="material-symbols-outlined search-icon">
+              search
+            </span>
             <Input
+              type={"search"}
               onChange={(e) => {
                 setSearchValue(e.target.value);
                 setFiltredMovies(
@@ -35,15 +40,20 @@ function App() {
                 );
               }}
               size="md"
-              radius="xl"
               placeholder="Search"
             />
           </div>
           <div className="top-container">
-            <h1>{selectedMovie ? selectedMovie.title : "Loading..."}</h1>
+            <h1>
+              {selectedMovie
+                ? selectedMovie.title.length > 20 && isMobile
+                  ? selectedMovie.title.substr(0, 19) + "..."
+                  : selectedMovie.title
+                : "Loading..."}
+            </h1>
           </div>
         </div>
-        <div className="bottom-container">
+        <div className="bottom">
           <LeftSide
             movies={filtredMovies.length > 0 ? filtredMovies : movies}
             selectedMovie={selectedMovie}

@@ -15,6 +15,10 @@ function RightSide({ selectedMovie }) {
     <div>
       <div className="right-text">
         <div className="right-text-element">
+          <p>Title:</p>
+          <p> {selectedMovie ? selectedMovie.title : "loading.."}</p>
+        </div>
+        <div className="right-text-element">
           <p>IMDB:</p>
           <p> {selectedMovie ? selectedMovie.vote_average : "loading.."}/10</p>
         </div>
